@@ -1,0 +1,26 @@
+spring:
+#  security:
+#    user:
+#      name: root
+#      password: 123456
+#      roles: admin,super
+#  # 设置thymeleaf缓存
+  thymeleaf:
+    cache: false
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/security?characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+
+mybatis:
+  mapper-locations: classpath:com/kaede/pro02/mapper/*.xml
+  type-aliases-package: com.kaede.pro02.entity
+
+# 日志处理，为了展示mybatis运行的sql语句
+logging:
+  level:
+    com:
+      kaede: debug

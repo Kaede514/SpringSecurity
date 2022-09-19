@@ -1,0 +1,8 @@
+spring:
+  security:
+    user:
+      # 更改默认的用户名和密码
+      name: root
+      password: 123456
+
+
