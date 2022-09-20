@@ -1,5 +1,8 @@
+# 设置session超时时长
 server:
-  port: 8080
+  servlet:
+    session:
+      timeout: 1
 
 spring:
   datasource:
@@ -10,7 +13,7 @@ spring:
     password: 123456
 
 mybatis:
-  mapper-locations: classpath:com/kaede/mapper/*.xml
+  mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.kaede.entity
 
 # 日志处理，为了展示mybatis运行的sql语句
@@ -18,5 +21,3 @@ logging:
   level:
     com:
       kaede: debug
-
-

