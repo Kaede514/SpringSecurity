@@ -25,8 +25,8 @@ import java.util.concurrent.TimeUnit;
  * 自定义授权服务器的配置，基于JDBC的实现
  */
 
-@Configuration
-@EnableAuthorizationServer
+//@Configuration
+//@EnableAuthorizationServer
 public class JdbcAuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
     private final AuthenticationManager authenticationManager;

@@ -16,9 +16,9 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
  * 自定义授权服务器的配置，基于内存的实现
  */
 
-@Configuration
+//@Configuration
 //指定当前应用为授权服务器
-@EnableAuthorizationServer
+//@EnableAuthorizationServer
 public class InMemoryAuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
     @Autowired
