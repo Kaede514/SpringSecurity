@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/security?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true
+    username: root
+    password: 123456
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # 开启驼峰转换
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.kaede.pojo
+
+# 日志处理，为了展示mybatis运行的sql语句
+logging:
+  level:
+    com:
+      kaede: debug

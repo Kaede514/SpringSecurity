@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kaede.mapper.UserMapper">
+
+    <!-- User loadUserByUsername(@Param("username") String username); -->
+    <select id="loadUserByUsername" resultType="User">
+        select id, username, password, enabled, account_non_expired, account_non_locked, credentials_non_expired
+        from user where username = #{username}
+    </select>
+
+    <!-- List<Role> getRolesByUid(@Param("uid") Integer uid); -->
+    <select id="getRolesByUid" resultType="Role">
+        select r.id, r.name, r.name_zh nameZh
+        from role r, user_role ur
+        where r.id = ur.rid and ur.uid = #{uid}
+    </select>
+
+    <!-- Integer updatePassword(@Param("username") String username, @Param("password") String password); -->
+    <update id="updatePassword">
+        update `user` set password=#{password}
+        where username=#{username}
+    </update>
+
+</mapper>

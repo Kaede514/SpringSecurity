@@ -1,0 +1,13 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          # github客户端
+          github:
+            # 客户端ID
+            client-id: e819583001502e6e3d78
+            # 客户端密钥
+            client-secret: 3e42b09b1e1b3a4d8aef45908dc3838a9cdb0a04
+            # 重定向的URL(固定为/login/oauth2/code/客户端名字)
+            redirect-uri: http://localhost:8080/login/oauth2/code/github
